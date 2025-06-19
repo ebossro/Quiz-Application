@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>MonTest</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>INGGBAATEST-PRO</h1>
+      <section id="Bienvenue">
+        <h2>Bienvenue dans notre concours "Jeunes Talents du Numérique" !</h2>
+        <p>
+          Avant de commencer votre test, merci de bien vouloir entrer vos
+          informations.
+        </p>
+        <form action="" id="userInfoForm">
+          <input
+            type="text"
+            name="username"
+            placeholder="Votre nom complet"
+            required
+          />
+          <input
+            type="email"
+            name="mail"
+            placeholder="Votre adresse e-mail"
+            required
+          />
+          <input
+            type="number"
+            name="age"
+            id="age"
+            placeholder="Votre âge"
+            required
+          />
+          <button type="submit">Commencer le test</button>
+        </form>
+      </section>
+      <section id="sectionQuestion" style="display: none">
+        <div class="timer-container">
+          <span class="timer-icon">⏱️</span>
+          <span class="timer-display">
+            <span id="timerMinutes">10</span>:<span id="timerSeconds">00</span>
+          </span>
+        </div>
+        <div id="question-container">
+          <h3 id="question"></h3>
+          <div id="options"></div>
+          <h4 id="feedback"></h4>
+        </div>
+        <button id="suivant">Suivant</button>
+      </section>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>
