@@ -10,7 +10,6 @@ let score = 0;
 
 let timerInterval;
 let timeRemaining = 1200;
-let isQuizActive = false;
 
 const question = document.getElementById("question");
 const options = document.getElementById("options");
@@ -50,140 +49,140 @@ const questionResponce = [
     options: ["JavaScript", "PHP", "HTML"],
     answer: "PHP",
   },
-  {
-    question: "5. Que signifie IoT ?",
-    options: [
-      "Internet of Things",
-      "Internet of Technology",
-      "Innovation of Technology",
-    ],
-    answer: "Internet of Things",
-  },
-  {
-    question: "6. Quel est l'objectif principal du RGPD ?",
-    options: [
-      "Protéger les données personnelles",
-      "Augmenter la vitesse d'Internet",
-      "Créer des bases de données",
-    ],
-    answer: "Protéger les données personnelles",
-  },
-  {
-    question: "7. Quel est le rôle d'une API dans le développement web ?",
-    options: [
-      "Créer des interfaces utilisateur",
-      "Permettre la communication entre applications",
-      "Gérer les bases de données",
-    ],
-    answer: "Permettre la communication entre applications",
-  },
-  {
-    question:
-      "8. Quel est le protocole utilisé pour sécuriser les communications sur le web ?",
-    options: ["HTTP", "HTTPS", "FTP"],
-    answer: "HTTPS",
-  },
-  {
-    question: "9. Que signifie le terme 'responsive design' ?",
-    options: [
-      "Un site qui répond rapidement",
-      "Un site qui s'adapte à tous les appareils",
-      "Un site avec des animations",
-    ],
-    answer: "Un site qui s'adapte à tous les appareils",
-  },
-  {
-    question: "10. Quel est l'objectif principal du machine learning ?",
-    options: [
-      "Créer des bases de données",
-      "Permettre aux machines d'apprendre à partir des données",
-      "Améliorer la vitesse des ordinateurs",
-    ],
-    answer: "Permettre aux machines d'apprendre à partir des données",
-  },
-  {
-    question: "11. Quel est le rôle principal d'un certificat SSL ?",
-    options: [
-      "Accélérer le chargement des pages",
-      "Sécuriser les communications entre le client et le serveur",
-      "Créer des bases de données",
-    ],
-    answer: "Sécuriser les communications entre le client et le serveur",
-  },
-  {
-    question: "12. Que signifie le terme 'open source' ?",
-    options: [
-      "Logiciel gratuit",
-      "Code source accessible et modifiable",
-      "Logiciel propriétaire",
-    ],
-    answer: "Code source accessible et modifiable",
-  },
-  {
-    question: "13. Quel est le rôle principal d'un framework comme React ?",
-    options: [
-      "Créer des bases de données",
-      "Faciliter le développement d'interfaces utilisateur",
-      "Gérer les serveurs",
-    ],
-    answer: "Faciliter le développement d'interfaces utilisateur",
-  },
-  {
-    question: "14. Que signifie le terme 'phishing' en cybersécurité ?",
-    options: [
-      "Une attaque visant à voler des informations personnelles",
-      "Un logiciel antivirus",
-      "Un type de pare-feu",
-    ],
-    answer: "Une attaque visant à voler des informations personnelles",
-  },
-  {
-    question: "15. Quel est le langage utilisé pour styliser les pages web ?",
-    options: ["HTML", "CSS", "JavaScript"],
-    answer: "CSS",
-  },
-  {
-    question: "16. Que signifie le terme 'cloud computing' ?",
-    options: [
-      "Stockage de données sur des serveurs distants",
-      "Créer des bases de données",
-      "Améliorer la vitesse des ordinateurs",
-    ],
-    answer: "Stockage de données sur des serveurs distants",
-  },
-  {
-    question: "17. Quel est l'objectif principal d'un CMS comme WordPress ?",
-    options: [
-      "Créer des bases de données",
-      "Faciliter la création et la gestion de sites web",
-      "Gérer les serveurs",
-    ],
-    answer: "Faciliter la création et la gestion de sites web",
-  },
-  {
-    question: "18. Que signifie le terme 'cryptographie' ?",
-    options: [
-      "L'art de protéger les données par le chiffrement",
-      "Créer des bases de données",
-      "Améliorer la vitesse des ordinateurs",
-    ],
-    answer: "L'art de protéger les données par le chiffrement",
-  },
-  {
-    question: "19. Quel est le rôle principal d'un VPN ?",
-    options: [
-      "Accélérer la connexion Internet",
-      "Sécuriser la connexion et masquer l'adresse IP",
-      "Créer des bases de données",
-    ],
-    answer: "Sécuriser la connexion et masquer l'adresse IP",
-  },
-  {
-    question:
-      "20. Quel est le langage principalement utilisé pour les bases de données relationnelles ?",
-    options: ["SQL", "Python", "JavaScript"],
-    answer: "SQL",
-  },
+  // {
+  //   question: "5. Que signifie IoT ?",
+  //   options: [
+  //     "Internet of Things",
+  //     "Internet of Technology",
+  //     "Innovation of Technology",
+  //   ],
+  //   answer: "Internet of Things",
+  // },
+  // {
+  //   question: "6. Quel est l'objectif principal du RGPD ?",
+  //   options: [
+  //     "Protéger les données personnelles",
+  //     "Augmenter la vitesse d'Internet",
+  //     "Créer des bases de données",
+  //   ],
+  //   answer: "Protéger les données personnelles",
+  // },
+  // {
+  //   question: "7. Quel est le rôle d'une API dans le développement web ?",
+  //   options: [
+  //     "Créer des interfaces utilisateur",
+  //     "Permettre la communication entre applications",
+  //     "Gérer les bases de données",
+  //   ],
+  //   answer: "Permettre la communication entre applications",
+  // },
+  // {
+  //   question:
+  //     "8. Quel est le protocole utilisé pour sécuriser les communications sur le web ?",
+  //   options: ["HTTP", "HTTPS", "FTP"],
+  //   answer: "HTTPS",
+  // },
+  // {
+  //   question: "9. Que signifie le terme 'responsive design' ?",
+  //   options: [
+  //     "Un site qui répond rapidement",
+  //     "Un site qui s'adapte à tous les appareils",
+  //     "Un site avec des animations",
+  //   ],
+  //   answer: "Un site qui s'adapte à tous les appareils",
+  // },
+  // {
+  //   question: "10. Quel est l'objectif principal du machine learning ?",
+  //   options: [
+  //     "Créer des bases de données",
+  //     "Permettre aux machines d'apprendre à partir des données",
+  //     "Améliorer la vitesse des ordinateurs",
+  //   ],
+  //   answer: "Permettre aux machines d'apprendre à partir des données",
+  // },
+  // {
+  //   question: "11. Quel est le rôle principal d'un certificat SSL ?",
+  //   options: [
+  //     "Accélérer le chargement des pages",
+  //     "Sécuriser les communications entre le client et le serveur",
+  //     "Créer des bases de données",
+  //   ],
+  //   answer: "Sécuriser les communications entre le client et le serveur",
+  // },
+  // {
+  //   question: "12. Que signifie le terme 'open source' ?",
+  //   options: [
+  //     "Logiciel gratuit",
+  //     "Code source accessible et modifiable",
+  //     "Logiciel propriétaire",
+  //   ],
+  //   answer: "Code source accessible et modifiable",
+  // },
+  // {
+  //   question: "13. Quel est le rôle principal d'un framework comme React ?",
+  //   options: [
+  //     "Créer des bases de données",
+  //     "Faciliter le développement d'interfaces utilisateur",
+  //     "Gérer les serveurs",
+  //   ],
+  //   answer: "Faciliter le développement d'interfaces utilisateur",
+  // },
+  // {
+  //   question: "14. Que signifie le terme 'phishing' en cybersécurité ?",
+  //   options: [
+  //     "Une attaque visant à voler des informations personnelles",
+  //     "Un logiciel antivirus",
+  //     "Un type de pare-feu",
+  //   ],
+  //   answer: "Une attaque visant à voler des informations personnelles",
+  // },
+  // {
+  //   question: "15. Quel est le langage utilisé pour styliser les pages web ?",
+  //   options: ["HTML", "CSS", "JavaScript"],
+  //   answer: "CSS",
+  // },
+  // {
+  //   question: "16. Que signifie le terme 'cloud computing' ?",
+  //   options: [
+  //     "Stockage de données sur des serveurs distants",
+  //     "Créer des bases de données",
+  //     "Améliorer la vitesse des ordinateurs",
+  //   ],
+  //   answer: "Stockage de données sur des serveurs distants",
+  // },
+  // {
+  //   question: "17. Quel est l'objectif principal d'un CMS comme WordPress ?",
+  //   options: [
+  //     "Créer des bases de données",
+  //     "Faciliter la création et la gestion de sites web",
+  //     "Gérer les serveurs",
+  //   ],
+  //   answer: "Faciliter la création et la gestion de sites web",
+  // },
+  // {
+  //   question: "18. Que signifie le terme 'cryptographie' ?",
+  //   options: [
+  //     "L'art de protéger les données par le chiffrement",
+  //     "Créer des bases de données",
+  //     "Améliorer la vitesse des ordinateurs",
+  //   ],
+  //   answer: "L'art de protéger les données par le chiffrement",
+  // },
+  // {
+  //   question: "19. Quel est le rôle principal d'un VPN ?",
+  //   options: [
+  //     "Accélérer la connexion Internet",
+  //     "Sécuriser la connexion et masquer l'adresse IP",
+  //     "Créer des bases de données",
+  //   ],
+  //   answer: "Sécuriser la connexion et masquer l'adresse IP",
+  // },
+  // {
+  //   question:
+  //     "20. Quel est le langage principalement utilisé pour les bases de données relationnelles ?",
+  //   options: ["SQL", "Python", "JavaScript"],
+  //   answer: "SQL",
+  // },
 ];
 
 userInfoForm.addEventListener("submit", function (event) {
@@ -198,17 +197,15 @@ userInfoForm.addEventListener("submit", function (event) {
     return;
   }
 
-  localStorage.setItem("userKey", username);
-  localStorage.setItem("mailKey", mail);
-  localStorage.setItem("ageKey", age);
+  sessionStorage.setItem("userKey", username);
+  sessionStorage.setItem("mailKey", mail);
+  sessionStorage.setItem("ageKey", age);
 
   sectionBien.style.display = "none";
   sectionQuestion.style.display = "block";
   btnSuivant.style.display = "none";
 
   // l'affichage initiale
-  const totalQuestions = document.getElementById("totalQuestions");
-  if (totalQuestions) totalQuestions.textContent = questionResponce.length;
   updateTimerDisplay();
 
   afficherQestion();
@@ -216,6 +213,8 @@ userInfoForm.addEventListener("submit", function (event) {
 });
 
 function afficherQestion() {
+  const totalQuestions = document.getElementById("totalQuestions");
+  totalQuestions.textContent = `${questionPosition + 1} / ${questionResponce.length}`;
   const qr = questionResponce[questionPosition];
   question.innerText = qr.question;
   qr.options.forEach((op) => {
@@ -259,7 +258,6 @@ btnSuivant.addEventListener("click", function () {
 
 
 function startTimer() {
-  isQuizActive = true;
   timerInterval = setInterval(() => {
     timeRemaining--;
     updateTimerDisplay();
@@ -271,7 +269,6 @@ function startTimer() {
 }
 
 function stopTimer() {
-  isQuizActive = false;
   if (timerInterval) {
     clearInterval(timerInterval);
   }
@@ -285,10 +282,12 @@ function updateTimerDisplay() {
   const timerSeconds = document.getElementById("timerSeconds");
   const timerDisplay = document.querySelector(".timer-display");
 
-  if (timerMinutes)
+  if (timerMinutes) {
     timerMinutes.textContent = minutes.toString().padStart(2, "0");
-  if (timerSeconds)
+  }
+  if (timerSeconds) {
     timerSeconds.textContent = seconds.toString().padStart(2, "0");
+  }
 }
 
 function endQuizByTimeout() {
@@ -314,12 +313,7 @@ function endQuizByTimeout() {
 
 function afficherResultat() {
   stopTimer(); 
-  const username = localStorage.getItem("userKey");
-
-  // timer
-  const timeUsed = 600 - timeRemaining; 
-  const minutesUsed = Math.floor(timeUsed / 60);
-  const secondsUsed = timeUsed % 60;
+  const username = sessionStorage.getItem("userKey");
 
   sectionQuestion.innerHTML = `
     <div style="text-align: center; padding: 30px;">
@@ -345,7 +339,7 @@ function afficherResultat() {
 function recommencerQuiz() {
   questionPosition = 0;
   score = 0;
-  timeRemaining = 600;
+  timeRemaining = 1200;
 
   userInfoForm.reset();
 
@@ -354,4 +348,5 @@ function recommencerQuiz() {
   options.innerHTML = "";
   feedback.innerText = "";
   btnSuivant.style.display = "none";
+  location.reload();
 }
