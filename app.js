@@ -16,7 +16,7 @@ const options = document.getElementById("options");
 
 const questionResponce = [
   {
-    question: "1. Que signifie HTML ?",
+    question: "Que signifie HTML ?",
     options: [
       "HyperText Markup Language",
       "HighText Machine Language",
@@ -25,32 +25,32 @@ const questionResponce = [
     answer: "HyperText Markup Language",
   },
   {
-    question: "2. Quel est le rôle principal du CSS dans le développement web ?",
+    question: "Quel est le rôle principal du CSS dans le développement web ?",
     options: [
       "Structurer le contenu",
-      "Ajouter du style au contenu",
       "Créer des bases de données",
+      "Ajouter du style au contenu",
     ],
     answer: "Ajouter du style au contenu",
   },
   {
     question:
-      "3. Quelle est la fonction principale d'un pare-feu en cybersécurité ?",
+      "Quelle est la fonction principale d'un pare-feu en cybersécurité ?",
     options: [
       "Bloquer les virus",
-      "Filtrer le trafic réseau",
       "Crypter les données",
+      "Filtrer le trafic réseau",
     ],
     answer: "Filtrer le trafic réseau",
   },
   {
     question:
-      "4. Quel langage est principalement utilisé pour le développement côté serveur ?",
-    options: ["JavaScript", "PHP", "HTML"],
+      "Quel langage est principalement utilisé pour le développement côté serveur ?",
+    options: ["JavaScript", "HTML", "PHP"],
     answer: "PHP",
   },
   {
-    question: "5. Que signifie IoT ?",
+    question: "Que signifie IoT ?",
     options: [
       "Internet of Things",
       "Internet of Technology",
@@ -59,7 +59,7 @@ const questionResponce = [
     answer: "Internet of Things",
   },
   {
-    question: "6. Quel est l'objectif principal du RGPD ?",
+    question: "Quel est l'objectif principal du RGPD ?",
     options: [
       "Protéger les données personnelles",
       "Augmenter la vitesse d'Internet",
@@ -68,7 +68,7 @@ const questionResponce = [
     answer: "Protéger les données personnelles",
   },
   {
-    question: "7. Quel est le rôle d'une API dans le développement web ?",
+    question: "Quel est le rôle d'une API dans le développement web ?",
     options: [
       "Créer des interfaces utilisateur",
       "Permettre la communication entre applications",
@@ -78,12 +78,12 @@ const questionResponce = [
   },
   {
     question:
-      "8. Quel est le protocole utilisé pour sécuriser les communications sur le web ?",
+      "Quel est le protocole utilisé pour sécuriser les communications sur le web ?",
     options: ["HTTP", "HTTPS", "FTP"],
     answer: "HTTPS",
   },
   {
-    question: "9. Que signifie le terme 'responsive design' ?",
+    question: "Que signifie le terme 'responsive design' ?",
     options: [
       "Un site qui répond rapidement",
       "Un site qui s'adapte à tous les appareils",
@@ -92,16 +92,16 @@ const questionResponce = [
     answer: "Un site qui s'adapte à tous les appareils",
   },
   {
-    question: "10. Quel est l'objectif principal du machine learning ?",
+    question: "Quel est l'objectif principal du machine learning ?",
     options: [
       "Créer des bases de données",
-      "Permettre aux machines d'apprendre à partir des données",
       "Améliorer la vitesse des ordinateurs",
+      "Permettre aux machines d'apprendre à partir des données",
     ],
     answer: "Permettre aux machines d'apprendre à partir des données",
   },
   {
-    question: "11. Quel est le rôle principal d'un certificat SSL ?",
+    question: "Quel est le rôle principal d'un certificat SSL ?",
     options: [
       "Accélérer le chargement des pages",
       "Sécuriser les communications entre le client et le serveur",
@@ -110,7 +110,7 @@ const questionResponce = [
     answer: "Sécuriser les communications entre le client et le serveur",
   },
   {
-    question: "12. Que signifie le terme 'open source' ?",
+    question: "Que signifie le terme 'open source' ?",
     options: [
       "Logiciel gratuit",
       "Code source accessible et modifiable",
@@ -119,16 +119,16 @@ const questionResponce = [
     answer: "Code source accessible et modifiable",
   },
   {
-    question: "13. Quel est le rôle principal d'un framework comme React ?",
+    question: "Quel est le rôle principal d'un framework comme React ?",
     options: [
-      "Créer des bases de données",
       "Faciliter le développement d'interfaces utilisateur",
+      "Créer des bases de données",
       "Gérer les serveurs",
     ],
     answer: "Faciliter le développement d'interfaces utilisateur",
   },
   {
-    question: "14. Que signifie le terme 'phishing' en cybersécurité ?",
+    question: "Que signifie le terme 'phishing' en cybersécurité ?",
     options: [
       "Une attaque visant à voler des informations personnelles",
       "Un logiciel antivirus",
@@ -137,12 +137,12 @@ const questionResponce = [
     answer: "Une attaque visant à voler des informations personnelles",
   },
   {
-    question: "15. Quel est le langage utilisé pour styliser les pages web ?",
+    question: "Quel est le langage utilisé pour styliser les pages web ?",
     options: ["HTML", "CSS", "JavaScript"],
     answer: "CSS",
   },
   {
-    question: "16. Que signifie le terme 'cloud computing' ?",
+    question: "Que signifie le terme 'cloud computing' ?",
     options: [
       "Stockage de données sur des serveurs distants",
       "Créer des bases de données",
@@ -151,7 +151,7 @@ const questionResponce = [
     answer: "Stockage de données sur des serveurs distants",
   },
   {
-    question: "17. Quel est l'objectif principal d'un CMS comme WordPress ?",
+    question: "Quel est l'objectif principal d'un CMS comme WordPress ?",
     options: [
       "Créer des bases de données",
       "Faciliter la création et la gestion de sites web",
@@ -160,7 +160,7 @@ const questionResponce = [
     answer: "Faciliter la création et la gestion de sites web",
   },
   {
-    question: "18. Que signifie le terme 'cryptographie' ?",
+    question: "Que signifie le terme 'cryptographie' ?",
     options: [
       "L'art de protéger les données par le chiffrement",
       "Créer des bases de données",
@@ -169,7 +169,7 @@ const questionResponce = [
     answer: "L'art de protéger les données par le chiffrement",
   },
   {
-    question: "19. Quel est le rôle principal d'un VPN ?",
+    question: "Quel est le rôle principal d'un VPN ?",
     options: [
       "Accélérer la connexion Internet",
       "Sécuriser la connexion et masquer l'adresse IP",
@@ -179,7 +179,7 @@ const questionResponce = [
   },
   {
     question:
-      "20. Quel est le langage principalement utilisé pour les bases de données relationnelles ?",
+      "Quel est le langage principalement utilisé pour les bases de données relationnelles ?",
     options: ["SQL", "Python", "JavaScript"],
     answer: "SQL",
   },
@@ -337,16 +337,5 @@ function afficherResultat() {
 }
 
 function recommencerQuiz() {
-  questionPosition = 0;
-  score = 0;
-  timeRemaining = 1200;
-
-  userInfoForm.reset();
-
-  sectionQuestion.style.display = "none";
-  sectionBien.style.display = "block";
-  options.innerHTML = "";
-  feedback.innerText = "";
-  btnSuivant.style.display = "none";
   location.reload();
 }
