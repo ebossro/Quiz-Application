@@ -214,7 +214,7 @@ userInfoForm.addEventListener("submit", function (event) {
 
 function afficherQestion() {
   const totalQuestions = document.getElementById("totalQuestions");
-  totalQuestions.textContent = `${questionPosition + 1} / ${questionResponce.length}`;
+  totalQuestions.textContent = `Nombre de questions : ${questionPosition + 1} / ${questionResponce.length}`;
   const qr = questionResponce[questionPosition];
   question.innerText = qr.question;
   qr.options.forEach((op) => {
@@ -231,10 +231,10 @@ function afficherQestion() {
 function selectAnswer(answer) {
   const correctAnswer = questionResponce[questionPosition].answer;
   if (correctAnswer === answer) {
-    feedback.innerText = "Gra gra Bonne reponse";
+    feedback.innerText = "Bravo ! Bonne réponse";
     score++;
   } else {
-    feedback.innerText = `Science !!! La bonne réponse était : ${correctAnswer}`;
+    feedback.innerText = `Dommage ! La bonne réponse était : ${correctAnswer}`;
   }
   document.querySelectorAll(".answerBtn").forEach((btn) => {
     btn.disabled = true;
@@ -292,7 +292,7 @@ function updateTimerDisplay() {
 
 function endQuizByTimeout() {
   stopTimer();
-  const username = localStorage.getItem("userKey");
+  const username = sessionStorage.getItem("userKey");
 
   if (sectionQuestion) {
     sectionQuestion.innerHTML = `
