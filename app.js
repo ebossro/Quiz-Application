@@ -9,7 +9,7 @@ let score = 0;
 
 
 let timerInterval;
-let timeRemaining = 1200;
+let timeRemaining = 60;
 
 const question = document.getElementById("question");
 const options = document.getElementById("options");
@@ -299,11 +299,11 @@ function endQuizByTimeout() {
       <div class="timeout-screen">
         <span class="timeout-icon">⏰</span>
         <h2>Temps écoulé !</h2>
-        <p>Désolé ${username}, le temps imparti pour ce quiz est terminé.</p>
+        <p>Désolé <span style="font-weight: bold; color: var(--text);">${username}</span>, le temps imparti pour ce quiz est terminé.</p>
         <p>Vous avez répondu à <strong>${questionPosition}</strong> questions sur <strong>${questionResponce.length}</strong>.</p>
         <p>Votre score : <strong>${score}/${questionPosition}</strong></p>
         <p>Ne vous découragez pas ! Vous pouvez toujours recommencer pour améliorer votre performance.</p>
-        <button onclick="recommencerQuiz()" style="background: white; color: #ff6b6b; padding: 15px 30px; border: none; border-radius: 25px; font-weight: bold; cursor: pointer; margin-top: 20px;">
+        <button onclick="recommencerQuiz()" style="background: linear-gradient(90deg, var(--primary), var(--accent)); color: var(--white); padding: 15px 30px; border: none; border-radius: 25px; font-weight: bold; cursor: pointer; margin-top: 20px;">
           Recommencer le quiz
         </button>
       </div>

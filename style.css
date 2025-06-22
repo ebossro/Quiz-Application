@@ -186,7 +186,7 @@ button:hover {
 .timeout-screen h2 {
   font-size: 28px;
   margin-bottom: 20px;
-  color: var(--white);
+  color: var(--danger);
 }
 
 .timeout-screen .timeout-icon {
@@ -199,4 +199,10 @@ button:hover {
   font-size: 18px;
   margin-bottom: 30px;
   line-height: 1.6;
+  color: var(--text);
+}
+
+.timeout-screen strong {
+  color: var(--danger);
+  font-weight: 700;
 }
