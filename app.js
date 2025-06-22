@@ -9,7 +9,7 @@ let score = 0;
 
 
 let timerInterval;
-let timeRemaining = 60;
+let timeRemaining = 1200;
 
 const question = document.getElementById("question");
 const options = document.getElementById("options");
