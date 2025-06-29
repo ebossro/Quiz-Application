@@ -232,9 +232,10 @@ function selectAnswer(answer) {
   const correctAnswer = questionResponce[questionPosition].answer;
   if (correctAnswer === answer) {
     feedback.innerText = "Bravo ! Bonne réponse";
-    score++;
+    feedback.style.color = "green";
   } else {
     feedback.innerText = `Dommage ! La bonne réponse était : ${correctAnswer}`;
+    feedback.style.color = "red";
   }
   document.querySelectorAll(".answerBtn").forEach((btn) => {
     btn.disabled = true;
