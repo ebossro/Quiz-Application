@@ -231,10 +231,10 @@ function afficherQestion() {
 function selectAnswer(answer) {
   const correctAnswer = questionResponce[questionPosition].answer;
   if (correctAnswer === answer) {
-    feedback.innerText = "Bravo ! Bonne réponse";
+    feedback.innerText = "Bravo ! 👌 Bonne réponse";
     feedback.style.color = "green";
   } else {
-    feedback.innerText = `Dommage ! La bonne réponse était : ${correctAnswer}`;
+    feedback.innerText = `Dommage ! 😭 La bonne réponse était : ${correctAnswer}`;
     feedback.style.color = "red";
   }
   document.querySelectorAll(".answerBtn").forEach((btn) => {
@@ -246,7 +246,6 @@ function selectAnswer(answer) {
 btnSuivant.addEventListener("click", function () {
   questionPosition++;
   if (questionPosition < questionResponce.length) {
-    // On nettoie les anciennes options
     options.innerHTML = "";
     feedback.innerText = "";
     btnSuivant.style.display = "none";
@@ -256,7 +255,6 @@ btnSuivant.addEventListener("click", function () {
     afficherResultat();
   }
 });
-
 
 function startTimer() {
   timerInterval = setInterval(() => {
